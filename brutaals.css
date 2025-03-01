@@ -91,7 +91,7 @@ footer{
     background-image: url('images/footer-image.png');
     background-size: cover;
     position: sticky;
-    bottom: -3vh;
+    bottom: -1vh;
     padding-top: 3vh;
     z-index: 10;
 }
