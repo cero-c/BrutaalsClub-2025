@@ -93,7 +93,7 @@ footer{
     position: sticky;
     bottom: -1vh;
     padding-top: 3vh;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
     z-index: 10;
 }
 footer img{ 
