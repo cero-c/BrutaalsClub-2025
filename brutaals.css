@@ -1,0 +1,368 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family:'Galindo';
+    src: url('fonts/Galindo/Galindo-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Galdeano';
+    src: url('fonts/Galdeano/Galdeano-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PlayfairDisplayExBold';
+    src: url('fonts/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf') format('truetype');
+}
+
+body{
+    background-color: #FFEDD2;
+    overflow-x: hidden;
+}
+#homepagina header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+.opening h1{
+    font-size: 1em;
+}
+#homepagina{
+    background-color: #F5C074;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    gap: 1em;
+    max-width: 95%;
+}
+/*nav*/
+
+main ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 2em;
+}
+li{
+    display: block;
+    flex-direction: column;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+main a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Galindo', Arial, Helvetica, sans-serif ;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #FFEDD2;
+    border:0.1em solid #FFEDD2;
+    border-radius: 10%;
+    padding: 0.5em 1em;
+    color: #7F3F00;
+    text-wrap: nowrap;
+}
+
+a:hover {
+    color: #0A594B;
+    transform: skew(10deg,-5deg);
+}
+
+/*logo*/
+.logo{
+    max-width:5em;
+}
+
+header{
+    display: flex;
+    justify-content: end;
+    padding: 1em;
+}
+/*footer*/
+
+footer{
+    background-image: url('images/footer-image.png');
+    background-size: cover;
+    position: sticky;
+    bottom: 0;
+    padding-top: 3vh;
+    z-index: 10;
+}
+footer img{ 
+    max-height: 10vh;
+    max-width: 10vw;
+    padding: 1em 0 0.2em 0;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    gap: 1em;
+}
+
+footer a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5vh;
+    font-family: 'Galdeano', Arial, Helvetica, sans-serif ;
+    font-size: 1em;
+    text-decoration: none;
+    color: #7F3F00;
+}
+
+.active{
+    display: block;
+    padding: 0 0.1em;
+    text-wrap: nowrap;
+    background-color: #7F3F00;
+    color: #FFEDD2;
+}
+
+#homepagina footer{
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 5vw;
+    margin-bottom: -2vh;
+    font-size: 0.8em;
+}
+/*body*/
+article{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5em 1em 1.5em;
+    gap: 1em;
+}
+
+p{
+    font-family: 'Galdeano', Arial, Helvetica, sans-serif ;
+    color: #7F3F00;
+}
+main span{
+    font-family: 'Galindo', Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+h1{
+    font-family: 'Galindo', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.quotes{
+    background-color: #F18E00;
+    display: flex; 
+    flex-direction: column;
+    border-radius: 2%;
+    gap: 0.5em;
+    padding: 1em 0;
+    margin-top: -2em;
+    text-align: center;
+    z-index: -1;
+}
+q{
+    font-size: 1.1em;
+}
+.quotes p{
+    color:#000000;
+}
+#ontdek{
+    font-family: 'PlayfairDisplayExBold', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #7F3F00;
+    border: 0.3em dashed #7F3F00;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    animation: ontdek 4s ease-in-out infinite;
+}
+@keyframes ontdek {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(0.3em); }
+    75% { transform: translateY(-0.3em); }
+    100% { transform: translateY(0); }
+}
+
+/*actueel*/
+.home div{
+    display: flex;
+    padding: 0 0 0.5em 0;
+}
+.home h2{
+    animation: none;
+    border: none;
+    margin-top: -0.5em;
+}
+#bladeren{
+    max-height: 2em;
+    max-width: fit-content;
+    animation: title 5s ease-in-out infinite;
+    margin: -0.5em 0;
+    z-index: 6;
+}
+
+@keyframes title {
+    0% { transform: rotate(0deg) scale(1.2); }  
+    50% { transform: rotate(30deg) scale(1.4); }
+    100% { transform: rotate(0deg) scale(1.2); }
+}
+#hoger{
+    margin-top: -1em;
+}
+/*tijdlijn*/
+.tijdlijn img{
+    max-width: 5vw;
+    max-height: 4vh;
+    z-index: 5;
+}
+
+.tijdlijn{
+    display: flex;
+    width: 90%;
+    gap: 2vw;
+    position:relative;
+}
+
+.tijdlijn::before {
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 150%;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    background-color: #F5C074;
+    z-index: 4;
+}
+
+#blaadjes{
+    max-height: 5vh;
+    animation: title 5s ease-in-out infinite;
+    margin: 0 0 0 5vw;
+    z-index: 6;
+}
+
+h2{
+    font-family: 'PlayfairDisplayExBold', Arial, Helvetica, sans-serif;
+    color: #7F3F00;
+    text-wrap: nowrap;
+    font-size: 1.2em;
+    color: #7F3F00;
+    padding: 1vh 1vw;
+}
+
+.tijdlijn h2{
+    gap: 2vw;
+
+    z-index: 7;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 3em;
+    color: #F18E00;
+}
+figure img{
+   min-height: fit-content;
+   min-width: 60vw;
+}
+
+figcaption{
+    font-family: 'Galdeano', Arial, Helvetica, sans-serif ;
+    color: #0A594B;
+    font-size: 0.9em;  
+    font-style: italic;  
+}
+
+#metro{
+    display: flex;
+    margin: 0 0 5vh 20vw;
+    min-width: fit-content;
+    min-height: 20vh;
+    animation: jump 3s linear infinite ;
+}
+@keyframes jump {
+    0% { transform: translateY(0); }  
+    50% { transform: translateY(5vh); }
+    100% { transform: translateY(0); }
+}
+
+/*actueel*/
+
+.waarom{
+    display: flex;
+    gap: 1vw;
+}
+
+.waarom img{
+    max-height: 4vh;
+    max-width: fit-content;
+}
+
+#voordelen{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    max-width: 95%;
+    color: #7F3F00;
+}
+
+#voordelen>img{
+    max-width: fit-content;
+    max-height: 30vh;
+    margin: 0.5em 0.5em 0.5em 2em;
+    align-self: center;
+
+}
+
+#Marcello{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+#koffie{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 0.5em double #0A594B;
+    padding: 1em 0.5em;
+    margin-left: 2em;
+}
+
+#koffie div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    gap: 3em;
+}
+
+#koffie img{
+    max-width: fit-content;
+    max-height: 15vh;
+    margin: 1em 0;
+    align-self: center;
+    animation: koffieboon 10s ease-in-out infinite;
+}
+
+@keyframes koffieboon {
+    0% { transform: rotate(0deg) scale(1.2); }  
+    50% { transform: rotate(-90deg) scale(1.4); }
+    100% { transform: rotate(0deg) scale(1.2); }
+}
+
+h3{
+    font-size: 1em;
+    margin-left: 1em;
+    text-wrap: nowrap;
+    color: #7F3F00;
+}
