@@ -272,8 +272,10 @@ figure{
     color: #F18E00;
 }
 figure img{
-   min-height: fit-content;
-   min-width: 60vw;
+    min-width: 60vw;
+    min-height: 40vh;
+    max-width: none;
+    max-height: none;
 }
 
 figcaption{
